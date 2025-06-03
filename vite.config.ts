@@ -5,9 +5,13 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  base: ",/"
   server: {
     host: "::",
     port: 8080,
+  },
+  build: {
+    outDir: "dist", // defines the folder to deploy for the hosting services
   },
   plugins: [
     react(),
